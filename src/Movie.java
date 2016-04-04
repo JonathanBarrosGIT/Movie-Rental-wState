@@ -1,7 +1,7 @@
 
 public class Movie {
 
-    private StateMovie state;
+    private MovieState state;
 
     public static final int CHILDRENS = 2;
     public static final int REGULAR = 0;
@@ -36,7 +36,7 @@ public class Movie {
         return this.state.renting(this);
     }
 
-    public void setState(StateMovie state){
+    public void setState(MovieState state){
         System.out.println("Turning state from " + this.state + " to " + state);
         this.state = state;
     }

@@ -1,7 +1,5 @@
-/**
- * Created by JoãoGabriel on 04/04/2016.
- */
-public class Rented {
+
+public class Rented extends MovieState {
     private static Rented instance;
 
     private Rented() {}
