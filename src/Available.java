@@ -5,7 +5,10 @@ public class Available extends MovieState{
     private Available(){}
 
     public static Available instance(){
-        return instance != null ? instance : new Available();
+        if(instance == null){
+            instance = new Available();
+        }
+        return instance;
     }
 
     public boolean renting(Movie movie){

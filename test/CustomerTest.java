@@ -109,8 +109,22 @@ public class CustomerTest {
         assertEquals(expectedStatement.toString(), customer.statement());
     }
 
+    @Test
+    public void testRenting(){
+        Movie movie = new Movie("A New Hope", Movie.REGULAR);
+        movie.renting();
+        movie.renting();
+    }
+
+    @Test
+    public void testReturning(){
+        Movie movie = new Movie("Rocky", Movie.REGULAR);
+        movie.returning();
+        movie.renting();
+        movie.returning();
+    }
+
     private void addRentalOfMovie(final Movie movie, final int daysRented) {
         customer.addRental(new Rental(movie, daysRented));
     }
-
 }
